@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <!-- Pengaturan viewport agar aplikasi tampil pas di layar HP dan tidak bisa di-zoom sembarangan -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>SMART SCHOOL - SMA Negeri 5 Makassar</title>
+    
+    <!-- Favicon (opsional, menggunakan ikon dari proyek Anda sebelumnya) -->
+    <link rel="icon" type="image/png" href="https://iili.io/FYaqxfV.th.png">
+    
+    <style>
+        /* Reset margin dan padding agar tidak ada celah putih di pinggir browser */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Mencegah munculnya scrollbar ganda (dari body dan dari dalam iframe) */
+            background-color: #f4f6f9; /* Warna latar belakang netral, menyesuaikan tema aplikasi */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        /* Pengaturan Iframe agar memenuhi seluruh jendela browser */
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Memuat tautan Google Apps Script Anda ke dalam iframe -->
+    <iframe src="https://script.google.com/macros/s/AKfycbxUzOYDPsqipNAEr8mnMR8DpI1e_tFPMV7cgus0YwEZ8E5Z4_7FAJfnR3hgLQFIm5Cg/exec" allowfullscreen="true" allow="autoplay; fullscreen"></iframe>
+
+</body>
+</html>
