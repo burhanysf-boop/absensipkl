@@ -2,46 +2,44 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Pengaturan viewport agar aplikasi tampil pas di layar HP dan tidak bisa di-zoom sembarangan -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
     <title>Presensi Anak PKL</title>
+
+    <!-- Favicon (diperbaiki penutup kutipnya) -->
     <link rel="icon" type="image/png" href="https://iili.io/F0B1fSf.jpg">
-    <!-- Halaman ini hanya mengarahkan ke Apps Script di tab utama (bukan iframe),
-         supaya penyimpanan browser dan GPS bekerja normal di iPhone. -->
-    <meta http-equiv="refresh" content="0; url=https://script.google.com/a/~/macros/s/AKfycbwKfKI_yU9iY3WxSMNCQ7vKN-CnWsJHlqRjV3WLNb_8EeK1hUJY9v-jJ4eNgd5kd2GM/exec">
+
     <style>
-        body {
+        /* Reset margin dan padding agar tidak ada celah putih di pinggir browser */
+        body, html {
             margin: 0;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #f4f6f9;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Mencegah munculnya scrollbar ganda */
+            background-color: 
+#f4f6f9; /* Warna latar belakang netral */
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: #334155;
-            text-align: center;
-            padding: 24px;
-            box-sizing: border-box;
         }
-        a {
-            display: inline-block;
-            margin-top: 16px;
-            padding: 12px 20px;
-            background: #2563eb;
-            color: #fff;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 600;
+
+        /* Pengaturan Iframe agar memenuhi seluruh jendela browser */
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
         }
     </style>
 </head>
 <body>
-    <div>
-        <p>Membuka aplikasi absensi...</p>
-        <a href="https://script.google.com/a/~/macros/s/AKfycbwKfKI_yU9iY3WxSMNCQ7vKN-CnWsJHlqRjV3WLNb_8EeK1hUJY9v-jJ4eNgd5kd2GM/exec">Buka aplikasi</a>
-    </div>
-    <script>
-        // Pindah ke tab utama, bukan di dalam iframe
-        window.location.replace("https://script.google.com/a/~/macros/s/AKfycbwKfKI_yU9iY3WxSMNCQ7vKN-CnWsJHlqRjV3WLNb_8EeK1hUJY9v-jJ4eNgd5kd2GM/exec");
-    </script>
+
+    <!-- Memuat tautan Google Apps Script Anda ke dalam iframe -->
+    <iframe id="frameAbsen" class="active" allow="geolocation" 
+            src="https://script.google.com/a/~/macros/s/AKfycbxe8jZMZ71HkowBI0BWI30UUNgWZ3ko_ayIIC2Ar_Q2i2uixt7LHh3DMsnOZAy1RbzM6A/exec"></iframe>
+
 </body>
 </html>
